@@ -1,0 +1,26 @@
+package com.testing.competitive;
+
+public class TestSubstring {
+	
+	  public static void findSubstring(String str,String output){
+	        
+	        if(str.length()==0){
+	            System.out.println(str);
+	            return ;
+	        }
+	        char ch=str.toCharArray()[0];
+	        System.out.println(ch);
+	        String reducedStr=str.substring(1);
+	        findSubstring(reducedStr,ch+output);
+	        findSubstring(reducedStr,output);
+	        
+	    }
+	
+	public static void main(String[] args) {
+		System.out.println("hello World");
+		findSubstring("abc","");
+		
+		
+	}
+
+}
